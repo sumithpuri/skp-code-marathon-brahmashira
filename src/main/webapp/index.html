@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>brahmashira : simple-file-search</title>
+<style type="text/css">
+.auto-style1 {
+	font-family: "Juice ITC";
+	font-size: 96px;
+}
+
+.auto-style2 {
+	text-align: center;
+	width: 100%;
+}
+
+.auto-style3 {
+	color: #0000FF;
+}
+
+.auto-style5 {
+	text-align: center;
+}
+
+.auto-style6 {
+	font-size: medium;
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+}
+
+.auto-style7 {
+	text-align: center;
+	width: 100%;
+	font-size: medium;
+}
+
+.auto-style8 {
+	font-size: x-large;
+}
+
+.auto-style9 {
+	font-size: x-large;
+	color: #FF5500;
+	font-family: Verdana;
+}
+</style>
+<script>
+<!-- ajax -->
+	function brahmashira() {
+		var searchTerm = document.getElementById("Text1").value;
+		//alert("searching >>>>  " + searchTerm);
+
+		//w3schools
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+
+				//alert("got it!" + xhttp.responseText);
+				document.getElementById("results").innerHTML = xhttp.responseText;
+			}
+		};
+		xhttp.open("GET", "brahmashira.search?searchTerm=" + searchTerm, true);
+		xhttp.send();
+
+		return;
+	}
+</script>
+<!-- ajax -->
+</head>
+
+<body>
+	<center class="auto-style1">brahmashira : simple-file-search</center>
+	<form>
+
+		<center>
+			<p style="font-family: Arial; font-size: 10px; color: red">
+				Sample Search Terms: <span style='color: blue'>Son of Dyausu,
+					O Far-Seeing One, Maintain his Power Eternal, Maker of the Light</span>
+			</p>
+		</center>
+		<div class="auto-style2">
+			<input id="Text1" type="text" maxlength="200" size="200px"
+				style="height: 30px; font-size: 14px; font-family: Verdana, Geneva, Tahoma, sans-serif" />
+
+			<input type="button" name="4x Brahmastra" value="4x Brahmastra"
+				style="height: 30px" onclick="javascript: brahmashira();" /><br />
+			<br />
+			<br />
+			<table align="center" border="1"
+				style="border: 1px solid blue; font-family: Verdana; font-size: 14px; border-collapse: collapse;">
+				<tr>
+					<td>Project Codename</td>
+					<td>Brahmashira</td>
+				</tr>
+				<tr>
+					<td>Project Description</td>
+					<td>Apache Lucene Demo Code</td>
+				</tr>
+				<tr>
+					<td>Technical Blog</td>
+					<td>http://www.techilashots.com</td>
+				</tr>
+				<tr>
+					<td>Technical Blog Post</td>
+					<td>https://goo.gl/nxD5VY</td>
+				</tr>
+				<tr>
+					<td>[Developer Notes]</td>
+					<td>[01] Tested On Java 9.0+</td>
+				</tr>
+
+
+			</table>
+		</div>
+	</form>
+
+	<div id="fileData" class="auto-style6">
+		<span class="auto-style9"><br />
+		<br />
+		<br />SEARCH RESULTS (DOC ID)<br /> </span>
+		<table style="width: 100%">
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div id="fileNames"
+		style="font-size: 16px; font-family: 'Courier New', Courier, monospace; width: 100%">
+		<table style="width: 100%;">
+			<tr>
+				<td style="width: 95%; text-align: left" class="auto-style5">
+					<div id="results" name="I1"
+						style="font-size: 16px; font-family: 'Courier New', Courier, monospace; width: 100%; width: 100%"></div>
+				</td>
+			</tr>
+		</table>
+		<br /> <br /> <br />
+	</div>
+</body>
+
+</html>
