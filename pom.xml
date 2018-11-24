@@ -2,12 +2,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>brahmashira</groupId>
-	<artifactId>brahmashira</artifactId>
+	<groupId>me.sumithpuri.github</groupId>
+	<artifactId>skp-code-marathon-brahmashira</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	<name>brahmashira : simple-file-search</name>
+	<name>Brahmashira : Search Using Apache Lucene 5.3.x/5.4.x</name>
 	<url>http://maven.apache.org</url>
 	
 	<properties>
@@ -75,4 +75,5 @@
 		</resources>
 		<finalName>brahmashira</finalName>
 	</build>
+	<description>Code Samples for the Blog Article [Search with Apache Lucene 5.3.x/5.4.x] </description>
 </project>
